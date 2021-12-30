@@ -1,0 +1,70 @@
+@charset "UTF-8";
+body {
+  background-image: url(../../背景.png);
+  background-size: cover;
+}
+
+header .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header .header__logo {
+  width: 50%;
+}
+header .header__content {
+  width: 50%;
+}
+header .header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-linner {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.hero-header {
+  height: 100vh;
+  width: 50%;
+  margin-left: 50%;
+  -webkit-transform: translateY(60%);
+          transform: translateY(60%);
+}
+
+.mg-t20 {
+  margin-top: 20px;
+}
+
+.mg-t50 {
+  margin-top: 50px;
+}
+
+.mg-t80 {
+  margin-top: 80px;
+}
+
+.mg-t100 {
+  margin-top: 100px;
+}
+
+.mg-b20 {
+  margin-bottom: 20px;
+}
+
+.mg-b50 {
+  margin-bottom: 50px;
+}
+
+.mg-b80 {
+  margin-bottom: 80px;
+}
+
+.mg-b100 {
+  margin-bottom: 100px;
+}

@@ -1,0 +1,14 @@
+body {
+  background: #7d989e;
+  color: #ffffff;
+}
+
+.main-linner {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.hero-header {
+  width: 50%;
+  margin-left: 50%;
+}
