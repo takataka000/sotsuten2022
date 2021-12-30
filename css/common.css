@@ -319,11 +319,12 @@ html body main .archive__img img:hover {
   width: 100%;
 }
 .study-list__img img {
-  width: 100%;
+  width: 170%;
   height: auto;
   line-height: 0;
   position: absolute;
   bottom: 0;
+  margin: 0 -35%;
 }
 .study-list__txt {
   position: absolute;
