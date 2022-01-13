@@ -2,7 +2,7 @@
 html {
   /* 読み込み完了後に「loaded」を付与する */
   /* 以降「SpinKit」で選んだアニメーションのCSSを貼付する */
-  background-color: #6D9498;
+  background-color: #a9b6c3;
 }
 @-webkit-keyframes fadeOut {
   from {
@@ -55,7 +55,7 @@ html .dot2 {
   display: inline-block;
   position: absolute;
   top: 0;
-  background-color: #6D9498;
+  background-color: #a9b6c3;
   border-radius: 100%;
   -webkit-animation: sk-bounce 2s infinite ease-in-out;
   animation: sk-bounce 2s infinite ease-in-out;
@@ -96,9 +96,10 @@ html .dot2 {
   }
 }
 html body {
-  background-image: url(../images/haikei.png);
-  background-size: cover;
-  background-repeat: repeat;
+  background-image: url(../images/senn3.svg);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 420px;
   color: #ffffff;
   text-shadow: 0.1px 0.1px 0px #afafaf, -0.1px -0.1px 0px #afafaf, -0.1px 0.1px 0px #afafaf, 0.1px -0.1px 0px #afafaf, 0.1px 0px 0px #afafaf, -0.1px 0px 0px #afafaf, 0px 0.1px 0px #afafaf, 0px -0.1px 0px #afafaf;
 }
@@ -108,7 +109,7 @@ html body .main-linner {
   margin: 0 auto;
 }
 html body .main-linner__txt {
-  width: 50%;
+  margin-left: 50%;
 }
 html body header .header {
   display: -webkit-box;
@@ -140,17 +141,16 @@ html body header .header-linner__txt {
   width: 50%;
 }
 html body main {
-  background: url(../images/wave.png), url(../images/wave2.png);
-  background-size: 140% auto, 170% auto;
-  background-repeat: no-repeat, no-repeat;
-  background-position: 50% -50px, 50% 110%;
   padding-bottom: 300px;
 }
 html body main .hero-header {
   height: 100vh;
-  margin-left: 50%;
-  -webkit-transform: translateY(60%);
-          transform: translateY(60%);
+  -webkit-transform: translateY(30%);
+          transform: translateY(30%);
+}
+html body main .hero-header p {
+  font-size: 2rem;
+  line-height: 2.5;
 }
 html body main .session__schedule .btn {
   border: 1px solid #ffffff;
@@ -273,6 +273,34 @@ html body main .archive__img img:hover {
 
 .mg-t100 {
   margin-top: 100px;
+}
+
+.mg-l-50 {
+  margin-left: -50%;
+}
+
+.mg-l-30 {
+  margin-left: -30%;
+}
+
+.mg-l-10 {
+  margin-left: -10%;
+}
+
+.mg-l-100 {
+  margin-left: -30%;
+}
+
+.mg-l200 {
+  margin-left: 20%;
+}
+
+.mg-l100 {
+  margin-left: 10%;
+}
+
+.pd-t20 {
+  padding-top: 20px;
 }
 
 .pd-b100 {
