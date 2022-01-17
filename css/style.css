@@ -1,14 +1,422 @@
-body {
-  background: #7d989e;
-  color: #ffffff;
+@charset "UTF-8";
+html {
+  /* 読み込み完了後に「loaded」を付与する */
+  /* 以降「SpinKit」で選んだアニメーションのCSSを貼付する */
+  background-color: #a9b6c3;
 }
-
-.main-linner {
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    display: none;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+html #loader {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  /* 環境によって「z-index」追加 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+html #loader.loaded {
+  animation: fadeOut 1s forwards;
+}
+html .spinner {
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+  top: 45%;
+  position: relative;
+  text-align: center;
+  -webkit-animation: sk-rotate 2s infinite linear;
+  animation: sk-rotate 2s infinite linear;
+}
+html .dot1,
+html .dot2 {
   width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: #a9b6c3;
+  border-radius: 100%;
+  -webkit-animation: sk-bounce 2s infinite ease-in-out;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+html .dot2 {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+@-webkit-keyframes sk-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes sk-rotate {
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes sk-bounce {
+  0%, 100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+html body {
+  background-image: url(../images/senn3.svg);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 420px;
+  color: #ffffff;
+  /*ボタン内spanの形状*/
+  /*hoverした際の形状*/
+  /*ボタン内spanの形状*/
+  /*hoverした際の形状*/
+}
+html body .sm-btn {
+  /*アニメーションの起点とするためrelativeを指定*/
+  position: relative;
+  overflow: hidden;
+  /*ボタンの形状*/
+  text-decoration: none;
+  display: inline-block;
+  background: #fff;
+  border-radius: 50%;
+  /* ボーダーの色と太さ */
+  padding: 20px;
+  text-align: center;
+  outline: none;
+  /*アニメーションの指定*/
+  transition: ease 0.2s;
+}
+html body .sm-btn span {
+  position: relative;
+  z-index: 3;
+  /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+  color: #fff;
+}
+html body .sm-btn:hover span {
+  color: #fff;
+}
+html body .sm-bgcenterout:before {
+  content: "";
+  /*絶対配置で位置を指定*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  /*色や形状*/
+  background: #dd0064;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  /*アニメーション*/
+  transition: transform 0.3s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+  transform: scale(0.12, 0.12);
+  transform-origin: center;
+}
+html body .sm-bgcenterout:after {
+  content: url(../images/sm-arrow.svg);
+  /*絶対配置で位置を指定*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(0.25);
+  z-index: 2;
+  /*色や形状*/
+  width: 100%;
+  height: 100%;
+  /*アニメーション*/
+  transform-origin: center;
+  opacity: 0;
+}
+html body .sm-bgcenterout:hover:before {
+  transform: scale(1, 1);
+}
+html body .sm-bgcenterout:hover:after {
+  opacity: 1;
+}
+html body .btn {
+  /*アニメーションの起点とするためrelativeを指定*/
+  position: relative;
+  overflow: hidden;
+  /*ボタンの形状*/
+  text-decoration: none;
+  display: inline-block;
+  background: #fff;
+  border-radius: 50%;
+  /* ボーダーの色と太さ */
+  padding: 24px;
+  text-align: center;
+  outline: none;
+  /*アニメーションの指定*/
+  transition: ease 0.2s;
+}
+html body .btn span {
+  position: relative;
+  z-index: 3;
+  /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+  color: #fff;
+}
+html body .btn:hover span {
+  color: #fff;
+}
+html body .bgcenterout:before {
+  content: "";
+  /*絶対配置で位置を指定*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  /*色や形状*/
+  background: #dd0064;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  /*アニメーション*/
+  transition: transform 0.3s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+  transform: scale(0.12, 0.12);
+  transform-origin: center;
+}
+html body .bgcenterout:after {
+  content: url(../images/arrow.svg);
+  /*絶対配置で位置を指定*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(0.3);
+  z-index: 2;
+  /*色や形状*/
+  width: 100%;
+  height: 100%;
+  /*アニメーション*/
+  transform-origin: center;
+  opacity: 0;
+}
+html body .bgcenterout:hover:before {
+  transform: scale(1, 1);
+}
+html body .bgcenterout:hover:after {
+  opacity: 1;
+}
+html body .main-linner {
+  width: 65%;
+  max-width: 1440px;
   margin: 0 auto;
 }
-
-.hero-header {
-  width: 50%;
+html body .main-linner__txt {
   margin-left: 50%;
+  position: relative;
+}
+html body .main-linner__txt .circle-link {
+  position: absolute;
+  top: -7px;
+  right: 0;
+}
+html body .main-linner__ttl-concept {
+  position: relative;
+}
+html body .main-linner__ttl-concept::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 1px;
+  background-color: #ffffff;
+}
+html body .main-linner__ttl-concept::after {
+  content: "Concept";
+  position: absolute;
+  top: 27px;
+  font-size: 2rem;
+  right: 50%;
+}
+html body .main-linner__ttl-abstract {
+  position: relative;
+}
+html body .main-linner__ttl-abstract::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 1px;
+  background-color: #ffffff;
+}
+html body .main-linner__ttl-abstract::after {
+  content: "Abstract";
+  position: absolute;
+  top: 15px;
+  font-size: 2rem;
+  right: 50%;
+}
+html body .main-linner__ttl-research {
+  position: relative;
+}
+html body .main-linner__ttl-research::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 1px;
+  background-color: #ffffff;
+}
+html body .main-linner__ttl-research::after {
+  content: "Research";
+  position: absolute;
+  top: 15px;
+  font-size: 2rem;
+  right: 50%;
+}
+html body .main-linner__ttl-session {
+  position: relative;
+}
+html body .main-linner__ttl-session::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 1px;
+  background-color: #ffffff;
+}
+html body .main-linner__ttl-session::after {
+  content: "Session";
+  position: absolute;
+  top: 15px;
+  font-size: 2rem;
+  right: 20%;
+}
+html body .main-linner__ttl-archive {
+  position: relative;
+}
+html body .main-linner__ttl-archive::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 1px;
+  background-color: #ffffff;
+}
+html body .main-linner__ttl-archive::after {
+  content: "Archive";
+  position: absolute;
+  top: 15px;
+  font-size: 2rem;
+  right: 50%;
+}
+html body header .header {
+  display: flex;
+}
+html body header .header__logo {
+  width: 50%;
+}
+html body header .header__ttl {
+  text-decoration: none;
+}
+html body header .header__content {
+  width: 50%;
+}
+html body header .header__list {
+  display: flex;
+  justify-content: space-between;
+}
+html body header .header-linner {
+  width: 65%;
+  margin: 0 auto;
+}
+html body header .header-linner__txt {
+  width: 50%;
+}
+html body main {
+  padding-bottom: 300px;
+}
+html body main .hero-header {
+  height: 100vh;
+  transform: translateY(30%);
+}
+html body main .hero-header p {
+  font-size: 2rem;
+  line-height: 2.5;
+}
+html body main .session__ul {
+  display: flex;
+  position: relative;
+}
+html body main .session__ul .sm-circle-link {
+  padding: 10px 0;
+}
+html body main .session__time {
+  width: 40%;
+  padding: 20px 0;
+  position: relative;
+}
+html body main .session__time:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  z-index: 2;
+}
+html body main .session__time::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 70%;
+  height: 1px;
+  background: #ffffff;
+  z-index: 1;
+}
+html body main .session__txt {
+  padding: 20px;
+  width: 60%;
+}
+html body main .session__day {
+  font-size: 2.5rem;
+}
+html body main .archive__img-box {
+  display: flex;
+  justify-content: space-between;
+}
+html body main .archive__img {
+  width: 45%;
+  height: 200px;
+  overflow: hidden;
+}
+html body main .archive__img img {
+  width: 100%;
+}
+html body main .archive__img img:hover {
+  opacity: 0.8;
 }
