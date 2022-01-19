@@ -1,84 +1,54 @@
-@mixin width {
-  width: calc(100% - 300px);
-  // min-width: 1100px;
-  margin-left: 300px;
+@import "_variable.scss";
+
+@mixin sp {
+  @media screen and (max-width: $sp + px) {
+    @content;
+  }
 }
-@mixin width-widetab {
-  width: calc(100% - 300px);
-  margin-left: 300px;
+@mixin sptab {
+  @media screen and (max-width: $tab + px) {
+    @content;
+  }
 }
-@mixin width-sp {
-  width: 100%;
-  margin-left: 0;
+@mixin tab {
+  @media screen and (min-width: ($sp + 1) + px) and (max-width: $tab + px) {
+    @content;
+  }
 }
-@mixin content-width {
-  width: 100%;
-  padding: 50px;
-  box-sizing: border-box;
+@mixin tabpc {
+  @media print, screen and (min-width: ($sp + 1) + px) {
+    @content;
+  }
 }
-@mixin flex {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+@mixin tabwide {
+  @media screen and (min-width: ($sp + 1) + px) and (max-width: $pc + px) {
+    @content;
+  }
+}
+@mixin pc {
+  @media print, screen and (min-width: ($tab + 1) + px) {
+    @content;
+  }
+}
+@mixin pc2 {
+  @media screen and (min-width: ($tab + 1) + px) and (max-width: $pc + px) {
+    @content;
+  }
+}
+@mixin wide {
+  @media screen and (min-width: ($pc + 1) + px) {
+    @content;
+  }
 }
 
-//～640pxまで
-@mixin sp {
-  @media screen and (max-width: map-get($breakpoint, sp) + px) {
+// inner以下
+@mixin inner {
+  @media screen and (min-width: ($sp + 1) + px) and (max-width: ($inner + px)) {
     @content;
   }
 }
-//～768pxまで
-@mixin sptab {
-  @media screen and (max-width: map-get($breakpoint, tab) + px) {
-    @content;
-  }
-}
-//～890pxまで
-@mixin mv {
-  @media screen and (max-width: map-get($breakpoint, mv) + px) {
-    @content;
-  }
-}
-// //～1000pxまで
-@mixin widetab {
-  @media screen and (max-width: map-get($breakpoint, widetab) + px) {
-    @content;
-  }
-}
-//～1200pxまで
-@mixin smallpc {
-  @media screen and (max-width: map-get($breakpoint, smallpc) + px) {
-    @content;
-  }
-}
-//～1300px以上
-@mixin widepc {
-  @media screen and (min-width: map-get($breakpoint, widepc) + px) {
-    @content;
-  }
-}
-// //641px～768pxまで
-@mixin tab {
-  @media screen and (min-width: (map-get($breakpoint, sp) + 1) + px) and (max-width: map-get($breakpoint, tab) + px) {
-    @content;
-  }
-}
-// //641px～1440pxまで
-@mixin tabpc {
-  @media screen and (min-width: (map-get($breakpoint, sp) + 1) + px) and (max-width: map-get($breakpoint, pc) + px) {
-    @content;
-  }
-}
-// //1001px～1199pxまで
-@mixin side-ttl {
-  @media screen and (min-width: (map-get($breakpoint, widetab) + 1) + px) and (max-width: map-get($breakpoint, smallpc) + px) {
-    @content;
-  }
-}
-//～321pxまで
-@mixin iphone {
-  @media screen and (max-width: map-get($breakpoint, i5) + px) {
-    @content;
-  }
+
+//spフォントのvwに対応したmixin
+@mixin fzvw($fz, $vw: $compWidth) {
+  font-size: (($fz / $vw) * 100) + vw;
 }

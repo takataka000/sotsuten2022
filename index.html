@@ -21,11 +21,11 @@
     </div>
 
     <header>
-        <section class="main-linner">
+        <section class="header-linner">
             <div class="header pd-t20">
                 <div class="header__logo">
                     <a href="#" class="header__ttl">
-                        <h1>卒展2022</h1>
+                        <img src="images/logo.svg" alt="">
                     </a>
                 </div>
                 <div class="header__content">
@@ -37,12 +37,30 @@
                                 <p>研究一覧</p>
                             </a></li>
                         <li><a href="session/">
-                                <p>オンラインセッション</p>
+                                <p>セッション</p>
                             </a></li>
                     </ul>
                 </div>
             </div>
         </section>
+        <div class="header-sp">
+            <div class="openbtn"><span></span><span></span><span></span></div>
+        </div>
+        <div class="header-sp__content">
+            <div class="header-sp__list">
+                <ul class="header-sp__listbox">
+                    <li><a href="#">
+                            <p>トップページ</p>
+                        </a></li>
+                    <li><a href="study/">
+                            <p>研究一覧</p>
+                        </a></li>
+                    <li><a href="session/">
+                            <p>セッション</p>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
     </header>
     <main>
         <section class="main-linner">
@@ -79,7 +97,7 @@
         </section>
         <section class="main-linner session">
             <div class="main-linner__txt mg-b200">
-                <h2 class="main-linner__ttl-session mg-b20 mg-l-30">オンラインセッション</h2>
+                <h2 class="main-linner__ttl-session mg-b20 mg-l-30">セッション</h2>
 
                 <div class="circle-link">
                     <a href="session/" class="btn bgcenterout"><span></span></a>
@@ -87,7 +105,7 @@
 
                 <p class="mg-b20 mg-l200">
                     出展者と来場者の皆様との対話の場は日時を設定の上、実施いたします。（詳細はこちらをご覧ください）例年と異なる形式となりますが、より多くの方々にご来場いただけることを楽しみにしております。</p>
-                <p class="session__day">2022年 2月19日（土）13:00 - 17:00</p>
+                <p class="session__day">2022年 2月19日（土）<br class="session__kai">13:00 - 17:00</p>
                 <div class="session__schedule mg-t20">
                     <ul class="session__ul mg-b20">
                         <li class="session__time">13:00</li>
@@ -144,6 +162,8 @@
     </main>
     <footer>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/toggle.js"></script>
 </body>
 
 </html>

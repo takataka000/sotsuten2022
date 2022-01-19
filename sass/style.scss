@@ -1,5 +1,5 @@
-// @import 'common.scss';
 @import "_color.scss";
+@import "_mixin.scss";
 
 html {
 
@@ -112,27 +112,18 @@ html {
     background-color: $c_bg03;
 
     body {
-        // background-image: url(../images/haikei.png);
-        // background-size: cover;
-        // background-repeat: repeat;
-
         background-image: url(../images/senn3.svg);
-        // background-attachment: fixed;
-        background-position: top left;
-        // background-repeat: repeat-y;
         background-repeat: no-repeat;
         background-size: 420px;
-        // background-size: 50%;
         color: $c_txt02;
-        // text-shadow:
-        //     0.1px 0.1px 0px $c_sd01,
-        //     -0.1px -0.1px 0px $c_sd01,
-        //     -0.1px 0.1px 0px $c_sd01,
-        //     0.1px -0.1px 0px $c_sd01,
-        //     0.1px 0px 0px $c_sd01,
-        //     -0.1px 0px 0px $c_sd01,
-        //     0px 0.1px 0px $c_sd01,
-        //     0px -0.1px 0px $c_sd01;
+
+        @include sp {
+            background-position: top left -250px;
+        }
+
+        @include tabpc {
+            background-position: top left;
+        }
 
         .sm-btn {
             /*アニメーションの起点とするためrelativeを指定*/
@@ -208,6 +199,7 @@ html {
         .sm-bgcenterout:hover:before {
             transform: scale(1, 1);
         }
+
         .sm-bgcenterout:hover:after {
             opacity: 1;
         }
@@ -286,27 +278,147 @@ html {
         .bgcenterout:hover:before {
             transform: scale(1, 1);
         }
+
         .bgcenterout:hover:after {
             opacity: 1;
         }
 
+        //余白エリア
+        //margin-top
+        .mg-t20 {
+            margin-top: 20px;
+        }
+
+        .mg-t50 {
+            margin-top: 50px;
+        }
+
+        .mg-t80 {
+            margin-top: 80px;
+        }
+
+        .mg-t100 {
+            margin-top: 100px;
+        }
+
+        //margin-bottom
+        .mg-b20 {
+            margin-bottom: 20px;
+        }
+
+        .mg-b50 {
+            margin-bottom: 50px;
+        }
+
+        .mg-b80 {
+            margin-bottom: 80px;
+        }
+
+        .mg-b100 {
+            margin-bottom: 100px;
+        }
+
+        .mg-b200 {
+            margin-bottom: 200px;
+        }
+
+        //margin-top
+        .mg-t20 {
+            margin-top: 20px;
+        }
+
+        .mg-t50 {
+            margin-top: 50px;
+        }
+
+        .mg-t100 {
+            margin-top: 100px;
+        }
+
+        //margin-left
+        .mg-l-50 {
+            margin-left: -50%;
+
+            @include sp {
+                margin-left: 0;
+            }
+        }
+
+        .mg-l-30 {
+            margin-left: -30%;
+
+            @include sp {
+                margin-left: 0;
+            }
+        }
+
+        .mg-l-10 {
+            margin-left: -10%;
+
+            @include sp {
+                margin-left: 0;
+            }
+        }
+
+        .mg-l-100 {
+            margin-left: -30%;
+
+            @include sp {
+                margin-left: 0;
+            }
+        }
+
+        .mg-l200 {
+            margin-left: 20%;
+
+            @include sp {
+                margin-left: 0;
+            }
+        }
+
+        .mg-l100 {
+            margin-left: 10%;
+
+            @include sp {
+                margin-left: 0;
+            }
+        }
+
+        //padding-top
+        .pd-t20 {
+            padding-top: 20px;
+        }
+
+        //padding-bottom
+        .pd-b100 {
+            padding-bottom: 100px;
+        }
+
+        //余白エリアここまで
 
         .main-linner {
-            width: 65%;
+            // width: 65%;
             max-width: 1440px;
             margin: 0 auto;
 
-            // @include sp {
-            //     width: 100%;
-            // }
-            // @include tabpc {
-            //     width: 65%;
-            // }
+            @include sp {
+                width: 90%;
+            }
+
+            @include tabpc {
+                width: 65%;
+            }
 
             &__txt {
                 // width: 50%;
-                margin-left: 50%;
                 position: relative;
+
+                @include sp {}
+
+                @include tabpc {
+                    margin-left: 50%;
+                }
+
                 .circle-link {
                     position: absolute;
                     top: -7px;
@@ -322,9 +434,16 @@ html {
                     position: absolute;
                     bottom: 0;
                     left: 0;
-                    width: 50%;
                     height: 1px;
                     background-color: $c_bg02;
+
+                    @include sp {
+                        width: 70%;
+                    }
+
+                    @include tabpc {
+                        width: 50%;
+                    }
                 }
 
                 &::after {
@@ -332,7 +451,14 @@ html {
                     position: absolute;
                     top: 27px;
                     font-size: 2rem;
-                    right: 50%;
+
+                    @include sp {
+                        right: 30%;
+                    }
+
+                    @include tabpc {
+                        right: 50%;
+                    }
                 }
             }
 
@@ -344,9 +470,16 @@ html {
                     position: absolute;
                     bottom: 0;
                     left: 0;
-                    width: 50%;
                     height: 1px;
                     background-color: $c_bg02;
+
+                    @include sp {
+                        width: 70%;
+                    }
+
+                    @include tabpc {
+                        width: 50%;
+                    }
                 }
 
                 &::after {
@@ -354,7 +487,14 @@ html {
                     position: absolute;
                     top: 15px;
                     font-size: 2rem;
-                    right: 50%;
+
+                    @include sp {
+                        right: 30%;
+                    }
+
+                    @include tabpc {
+                        right: 50%;
+                    }
                 }
             }
 
@@ -366,9 +506,16 @@ html {
                     position: absolute;
                     bottom: 0;
                     left: 0;
-                    width: 50%;
                     height: 1px;
                     background-color: $c_bg02;
+
+                    @include sp {
+                        width: 70%;
+                    }
+
+                    @include tabpc {
+                        width: 50%;
+                    }
                 }
 
                 &::after {
@@ -376,7 +523,14 @@ html {
                     position: absolute;
                     top: 15px;
                     font-size: 2rem;
-                    right: 50%;
+
+                    @include sp {
+                        right: 30%;
+                    }
+
+                    @include tabpc {
+                        right: 50%;
+                    }
                 }
             }
 
@@ -388,9 +542,16 @@ html {
                     position: absolute;
                     bottom: 0;
                     left: 0;
-                    width: 80%;
                     height: 1px;
                     background-color: $c_bg02;
+
+                    @include sp {
+                        width: 70%;
+                    }
+
+                    @include tabpc {
+                        width: 50%;
+                    }
                 }
 
                 &::after {
@@ -398,7 +559,14 @@ html {
                     position: absolute;
                     top: 15px;
                     font-size: 2rem;
-                    right: 20%;
+
+                    @include sp {
+                        right: 30%;
+                    }
+
+                    @include tabpc {
+                        right: 50%;
+                    }
                 }
             }
 
@@ -410,9 +578,16 @@ html {
                     position: absolute;
                     bottom: 0;
                     left: 0;
-                    width: 50%;
                     height: 1px;
                     background-color: $c_bg02;
+
+                    @include sp {
+                        width: 70%;
+                    }
+
+                    @include tabpc {
+                        width: 50%;
+                    }
                 }
 
                 &::after {
@@ -420,17 +595,48 @@ html {
                     position: absolute;
                     top: 15px;
                     font-size: 2rem;
-                    right: 50%;
+
+                    @include sp {
+                        right: 30%;
+                    }
+
+                    @include tabpc {
+                        right: 50%;
+                    }
                 }
             }
         }
 
         header {
+            .header-linner {
+                max-width: 1440px;
+                margin: 0 auto;
+                position: relative;
+
+                @include sp {
+                    width: 90%;
+                }
+
+                @include tabpc {
+                    width: 80%;
+                }
+
+                &__txt {
+                    width: 50%;
+                }
+            }
+
             .header {
                 display: flex;
+                justify-content: space-between;
 
                 &__logo {
-                    width: 50%;
+                    width: 30%;
+                    min-width: 300px;
+
+                    img {
+                        width: 100%;
+                    }
                 }
 
                 &__ttl {
@@ -438,7 +644,10 @@ html {
                 }
 
                 &__content {
-                    width: 50%;
+                    width: 40%;
+                    @include sp {
+                        display: none;
+                    }
                 }
 
                 &__list {
@@ -447,29 +656,91 @@ html {
                 }
             }
 
-            .header-linner {
-                width: 65%;
-                margin: 0 auto;
+            .header-sp {
+                position: fixed;
+                top: 0;
+                right: 0;
+                z-index: 9999;
+                @include sp {
+                    display: block;
+                }
 
-                &__txt {
-                    width: 50%;
+                @include tabpc {
+                    display: none;
+                }
+
+                .openbtn {
+                    position: relative;
+                    /*ボタン内側の基点となるためrelativeを指定*/
+                    background: $c_bg02;
+                    cursor: pointer;
+                    width: 50px;
+                    height: 50px;
+                    // border-radius: 5px;
+                }
+
+                /*ボタン内側*/
+                .openbtn span {
+                    display: inline-block;
+                    transition: all .4s;
+                    /*アニメーションの設定*/
+                    position: absolute;
+                    left: 14px;
+                    height: 3px;
+                    border-radius: 2px;
+                    background: $c_bg03;
+                    width: 45%;
+                }
+    
+                .openbtn span:nth-of-type(1) {
+                    top: 15px;
+                }
+    
+                .openbtn span:nth-of-type(2) {
+                    top: 23px;
+                }
+    
+                .openbtn span:nth-of-type(3) {
+                    top: 31px;
+                }
+    
+                /*activeクラスが付与されると1・3番目の要素が2番目の要素と同じ位置になり一本線に*/
+    
+                .openbtn.active span:nth-of-type(1),
+                .openbtn.active span:nth-of-type(3) {
+                    top: 23px;
+                }
+
+                &__list {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100vh;
+                    background-color: $c_bg03;
+                    z-index: 8888;
+                    display: none;
+                }
+                &__list.active {
+                    display: block;
+                    position: fixed;
+                }
+                &__listbox {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    text-align: center;
+                    transform: translateY(-50%);
+                    transform: translateX(-50%);
                 }
             }
         }
 
         main {
-            // background: url(../images/wave.png), url(../images/wave2.png);
-            // background: url(../images/senn.png), url(../images/wave2.png);
-            // background-size: 140% auto, 170% auto;
-            // background-repeat: no-repeat, no-repeat;
-            // background-position: 50% -50px, 50% 110%;
-
             padding-bottom: 300px; //仮置き
 
             .hero-header {
                 height: 100vh;
-                // width: 50%;
-                // margin-left: 20%;
                 transform: translateY(30%);
 
                 p {
@@ -504,6 +775,7 @@ html {
                 &__ul {
                     display: flex;
                     position: relative;
+
                     .sm-circle-link {
                         padding: 10px 0;
                     }
@@ -548,16 +820,35 @@ html {
                 &__day {
                     font-size: 2.5rem;
                 }
+
+                &__kai {
+                    @include sp {
+                        display: block;
+                    }
+
+                    @include tabpc {
+                        display: none;
+                    }
+                }
             }
 
             .archive {
                 &__img-box {
                     display: flex;
+                    flex-wrap: wrap;
                     justify-content: space-between;
                 }
 
                 &__img {
-                    width: 45%;
+                    @include sp {
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+
+                    @include tabpc {
+                        width: 45%;
+                    }
+
                     height: 200px;
                     overflow: hidden;
 
