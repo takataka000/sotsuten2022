@@ -86,7 +86,6 @@ html .dot2 {
 }
 html body {
   background-image: url(../images/senn3.svg);
-  background-position: top left;
   background-repeat: no-repeat;
   background-size: 420px;
   color: #ffffff;
@@ -94,6 +93,16 @@ html body {
   /*hoverした際の形状*/
   /*ボタン内spanの形状*/
   /*hoverした際の形状*/
+}
+@media screen and (max-width: 767px) {
+  html body {
+    background-position: top left -250px;
+  }
+}
+@media print, screen and (min-width: 768px) {
+  html body {
+    background-position: top left;
+  }
 }
 html body .sm-btn {
   /*アニメーションの起点とするためrelativeを指定*/
@@ -221,14 +230,117 @@ html body .bgcenterout:hover:before {
 html body .bgcenterout:hover:after {
   opacity: 1;
 }
+html body .mg-t20 {
+  margin-top: 20px;
+}
+html body .mg-t50 {
+  margin-top: 50px;
+}
+html body .mg-t80 {
+  margin-top: 80px;
+}
+html body .mg-t100 {
+  margin-top: 100px;
+}
+html body .mg-b20 {
+  margin-bottom: 20px;
+}
+html body .mg-b50 {
+  margin-bottom: 50px;
+}
+html body .mg-b80 {
+  margin-bottom: 80px;
+}
+html body .mg-b100 {
+  margin-bottom: 100px;
+}
+html body .mg-b200 {
+  margin-bottom: 200px;
+}
+html body .mg-t20 {
+  margin-top: 20px;
+}
+html body .mg-t50 {
+  margin-top: 50px;
+}
+html body .mg-t100 {
+  margin-top: 100px;
+}
+html body .mg-l-50 {
+  margin-left: -50%;
+}
+@media screen and (max-width: 767px) {
+  html body .mg-l-50 {
+    margin-left: 0;
+  }
+}
+html body .mg-l-30 {
+  margin-left: -30%;
+}
+@media screen and (max-width: 767px) {
+  html body .mg-l-30 {
+    margin-left: 0;
+  }
+}
+html body .mg-l-10 {
+  margin-left: -10%;
+}
+@media screen and (max-width: 767px) {
+  html body .mg-l-10 {
+    margin-left: 0;
+  }
+}
+html body .mg-l-100 {
+  margin-left: -30%;
+}
+@media screen and (max-width: 767px) {
+  html body .mg-l-100 {
+    margin-left: 0;
+  }
+}
+html body .mg-l200 {
+  margin-left: 20%;
+}
+@media screen and (max-width: 767px) {
+  html body .mg-l200 {
+    margin-left: 0;
+  }
+}
+html body .mg-l100 {
+  margin-left: 10%;
+}
+@media screen and (max-width: 767px) {
+  html body .mg-l100 {
+    margin-left: 0;
+  }
+}
+html body .pd-t20 {
+  padding-top: 20px;
+}
+html body .pd-b100 {
+  padding-bottom: 100px;
+}
 html body .main-linner {
-  width: 65%;
   max-width: 1440px;
   margin: 0 auto;
 }
+@media screen and (max-width: 767px) {
+  html body .main-linner {
+    width: 90%;
+  }
+}
+@media print, screen and (min-width: 768px) {
+  html body .main-linner {
+    width: 65%;
+  }
+}
 html body .main-linner__txt {
-  margin-left: 50%;
   position: relative;
+}
+@media print, screen and (min-width: 768px) {
+  html body .main-linner__txt {
+    margin-left: 50%;
+  }
 }
 html body .main-linner__txt .circle-link {
   position: absolute;
@@ -243,16 +355,34 @@ html body .main-linner__ttl-concept::before {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 50%;
   height: 1px;
   background-color: #ffffff;
+}
+@media screen and (max-width: 767px) {
+  html body .main-linner__ttl-concept::before {
+    width: 70%;
+  }
+}
+@media print, screen and (min-width: 768px) {
+  html body .main-linner__ttl-concept::before {
+    width: 50%;
+  }
 }
 html body .main-linner__ttl-concept::after {
   content: "Concept";
   position: absolute;
   top: 27px;
   font-size: 2rem;
-  right: 50%;
+}
+@media screen and (max-width: 767px) {
+  html body .main-linner__ttl-concept::after {
+    right: 30%;
+  }
+}
+@media print, screen and (min-width: 768px) {
+  html body .main-linner__ttl-concept::after {
+    right: 50%;
+  }
 }
 html body .main-linner__ttl-abstract {
   position: relative;
@@ -262,16 +392,34 @@ html body .main-linner__ttl-abstract::before {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 50%;
   height: 1px;
   background-color: #ffffff;
+}
+@media screen and (max-width: 767px) {
+  html body .main-linner__ttl-abstract::before {
+    width: 70%;
+  }
+}
+@media print, screen and (min-width: 768px) {
+  html body .main-linner__ttl-abstract::before {
+    width: 50%;
+  }
 }
 html body .main-linner__ttl-abstract::after {
   content: "Abstract";
   position: absolute;
   top: 15px;
   font-size: 2rem;
-  right: 50%;
+}
+@media screen and (max-width: 767px) {
+  html body .main-linner__ttl-abstract::after {
+    right: 30%;
+  }
+}
+@media print, screen and (min-width: 768px) {
+  html body .main-linner__ttl-abstract::after {
+    right: 50%;
+  }
 }
 html body .main-linner__ttl-research {
   position: relative;
@@ -281,16 +429,34 @@ html body .main-linner__ttl-research::before {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 50%;
   height: 1px;
   background-color: #ffffff;
+}
+@media screen and (max-width: 767px) {
+  html body .main-linner__ttl-research::before {
+    width: 70%;
+  }
+}
+@media print, screen and (min-width: 768px) {
+  html body .main-linner__ttl-research::before {
+    width: 50%;
+  }
 }
 html body .main-linner__ttl-research::after {
   content: "Research";
   position: absolute;
   top: 15px;
   font-size: 2rem;
-  right: 50%;
+}
+@media screen and (max-width: 767px) {
+  html body .main-linner__ttl-research::after {
+    right: 30%;
+  }
+}
+@media print, screen and (min-width: 768px) {
+  html body .main-linner__ttl-research::after {
+    right: 50%;
+  }
 }
 html body .main-linner__ttl-session {
   position: relative;
@@ -300,16 +466,34 @@ html body .main-linner__ttl-session::before {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 80%;
   height: 1px;
   background-color: #ffffff;
+}
+@media screen and (max-width: 767px) {
+  html body .main-linner__ttl-session::before {
+    width: 70%;
+  }
+}
+@media print, screen and (min-width: 768px) {
+  html body .main-linner__ttl-session::before {
+    width: 50%;
+  }
 }
 html body .main-linner__ttl-session::after {
   content: "Session";
   position: absolute;
   top: 15px;
   font-size: 2rem;
-  right: 20%;
+}
+@media screen and (max-width: 767px) {
+  html body .main-linner__ttl-session::after {
+    right: 30%;
+  }
+}
+@media print, screen and (min-width: 768px) {
+  html body .main-linner__ttl-session::after {
+    right: 50%;
+  }
 }
 html body .main-linner__ttl-archive {
   position: relative;
@@ -319,39 +503,150 @@ html body .main-linner__ttl-archive::before {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 50%;
   height: 1px;
   background-color: #ffffff;
+}
+@media screen and (max-width: 767px) {
+  html body .main-linner__ttl-archive::before {
+    width: 70%;
+  }
+}
+@media print, screen and (min-width: 768px) {
+  html body .main-linner__ttl-archive::before {
+    width: 50%;
+  }
 }
 html body .main-linner__ttl-archive::after {
   content: "Archive";
   position: absolute;
   top: 15px;
   font-size: 2rem;
-  right: 50%;
+}
+@media screen and (max-width: 767px) {
+  html body .main-linner__ttl-archive::after {
+    right: 30%;
+  }
+}
+@media print, screen and (min-width: 768px) {
+  html body .main-linner__ttl-archive::after {
+    right: 50%;
+  }
+}
+html body header .header-linner {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  html body header .header-linner {
+    width: 90%;
+  }
+}
+@media print, screen and (min-width: 768px) {
+  html body header .header-linner {
+    width: 80%;
+  }
+}
+html body header .header-linner__txt {
+  width: 50%;
 }
 html body header .header {
   display: flex;
+  justify-content: space-between;
 }
 html body header .header__logo {
-  width: 50%;
+  width: 30%;
+  min-width: 300px;
+}
+html body header .header__logo img {
+  width: 100%;
 }
 html body header .header__ttl {
   text-decoration: none;
 }
 html body header .header__content {
-  width: 50%;
+  width: 40%;
+}
+@media screen and (max-width: 767px) {
+  html body header .header__content {
+    display: none;
+  }
 }
 html body header .header__list {
   display: flex;
   justify-content: space-between;
 }
-html body header .header-linner {
-  width: 65%;
-  margin: 0 auto;
+html body header .header-sp {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  /*ボタン内側*/
+  /*activeクラスが付与されると1・3番目の要素が2番目の要素と同じ位置になり一本線に*/
 }
-html body header .header-linner__txt {
-  width: 50%;
+@media screen and (max-width: 767px) {
+  html body header .header-sp {
+    display: block;
+  }
+}
+@media print, screen and (min-width: 768px) {
+  html body header .header-sp {
+    display: none;
+  }
+}
+html body header .header-sp .openbtn {
+  position: relative;
+  /*ボタン内側の基点となるためrelativeを指定*/
+  background: #ffffff;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+html body header .header-sp .openbtn span {
+  display: inline-block;
+  transition: all 0.4s;
+  /*アニメーションの設定*/
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background: #a9b6c3;
+  width: 45%;
+}
+html body header .header-sp .openbtn span:nth-of-type(1) {
+  top: 15px;
+}
+html body header .header-sp .openbtn span:nth-of-type(2) {
+  top: 23px;
+}
+html body header .header-sp .openbtn span:nth-of-type(3) {
+  top: 31px;
+}
+html body header .header-sp .openbtn.active span:nth-of-type(1),
+html body header .header-sp .openbtn.active span:nth-of-type(3) {
+  top: 23px;
+}
+html body header .header-sp__list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #a9b6c3;
+  z-index: 8888;
+  display: none;
+}
+html body header .header-sp__list.active {
+  display: block;
+  position: fixed;
+}
+html body header .header-sp__listbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
 }
 html body main {
   padding-bottom: 300px;
@@ -405,14 +700,35 @@ html body main .session__txt {
 html body main .session__day {
   font-size: 2.5rem;
 }
+@media screen and (max-width: 767px) {
+  html body main .session__kai {
+    display: block;
+  }
+}
+@media print, screen and (min-width: 768px) {
+  html body main .session__kai {
+    display: none;
+  }
+}
 html body main .archive__img-box {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 html body main .archive__img {
-  width: 45%;
   height: 200px;
   overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  html body main .archive__img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+@media print, screen and (min-width: 768px) {
+  html body main .archive__img {
+    width: 45%;
+  }
 }
 html body main .archive__img img {
   width: 100%;
