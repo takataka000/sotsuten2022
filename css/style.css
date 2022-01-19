@@ -87,7 +87,7 @@ html .dot2 {
 html body {
   background-image: url(../images/senn3.svg);
   background-repeat: no-repeat;
-  background-size: 420px;
+  background-size: auto 100%;
   color: #ffffff;
   /*ボタン内spanの形状*/
   /*hoverした際の形状*/
@@ -96,7 +96,7 @@ html body {
 }
 @media screen and (max-width: 767px) {
   html body {
-    background-position: top left -250px;
+    background-position: top left -370px;
   }
 }
 @media print, screen and (min-width: 768px) {
@@ -648,9 +648,6 @@ html body header .header-sp__listbox {
   transform: translateY(-50%);
   transform: translateX(-50%);
 }
-html body main {
-  padding-bottom: 300px;
-}
 html body main .hero-header {
   height: 100vh;
   transform: translateY(30%);
@@ -735,4 +732,63 @@ html body main .archive__img img {
 }
 html body main .archive__img img:hover {
   opacity: 0.8;
+}
+html body footer {
+  background-image: url(../images/yuragi.svg);
+  background-repeat: no-repeat;
+  background-size: 420px;
+  background-position: bottom right;
+}
+html body footer .footer-linner {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  html body footer .footer-linner {
+    width: 90%;
+  }
+}
+@media print, screen and (min-width: 768px) {
+  html body footer .footer-linner {
+    width: 80%;
+  }
+}
+html body footer .footer-linner__txt {
+  width: 50%;
+}
+html body footer .footer-linner__copylight {
+  text-align: center;
+  padding-bottom: 10px;
+}
+html body footer .footer-linner__copylight img {
+  width: 150px;
+}
+html body footer .footer-linner__copylight p {
+  color: #000000;
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+html body footer .footer__logo {
+  width: 30%;
+  min-width: 300px;
+  margin-bottom: 80px;
+}
+html body footer .footer__logo img {
+  width: 100%;
+}
+html body footer .footer__ttl {
+  text-decoration: none;
+}
+html body footer .footer__content {
+  width: 30%;
+}
+@media screen and (max-width: 767px) {
+  html body footer .footer__content {
+    display: none;
+  }
+}
+html body footer .footer__list {
+  display: flex;
+  justify-content: space-between;
 }
